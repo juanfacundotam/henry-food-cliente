@@ -1,0 +1,73 @@
+.divUpdate {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.viewTitle {
+    color: rgb(218, 198, 155);
+    font-size: 20px;
+    margin-top: 50px;
+    z-index: 111;
+  }
+.viewTitle {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .button{
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.212);
+    top:50px;
+    right:15px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(17, 199, 93, 0.247);
+    backdrop-filter: blur(20px);
+  
+    cursor: pointer;
+    font-size: 22px;
+    padding: 0 2px 2px 2px;
+    z-index: 222;
+    color: white;
+  }
+  .button:hover{
+    background-color: rgba(26, 184, 91, 0.767);
+  }
+
+  @media screen and (max-width: 440px) {
+    .button{
+      top:53px;
+      right:25px;
+      width: 27px;
+      height: 27px;
+      font-size: 15px;
+      padding: 0 2px 2px 2px;
+      z-index: 222;
+      color: white;
+    }
+  }
+  

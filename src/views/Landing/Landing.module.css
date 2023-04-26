@@ -1,0 +1,248 @@
+.divLanding {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.landingWall {
+  background-image: url(../../assets/viewsWallPapers/fondo12.jpg),
+    linear-gradient(100deg, #000000, #00000025);
+  position: fixed;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: right;
+
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.034), rgb(0, 0, 0));
+
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.178);
+}
+
+.landingWall {
+  animation-name: fadeInRight;
+  animation-duration: 2s;
+  animation-fill-mode: none;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    /* transform: translate3d(100%, 0, 0); */
+  }
+  100% {
+    opacity: 1;
+    /* transform: translate3d(0, 0, 0); */
+  }
+}
+.divContainer {
+  /* border: 1px solid yellow; */
+  background-color: #9c9c9c15;
+  width: 345px;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 20px;
+  color: white;
+  z-index: 111;
+}
+
+
+
+
+.divImage {
+  /* border: 1px solid green; */
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+
+}
+
+.divText {
+  /* border: 1px solid green; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+
+  border-radius: 20px;
+  padding: 0 30px;
+  
+  z-index: 222;
+}
+
+.divImage {
+  animation-name: fade-in-top;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+@keyframes fade-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.divContainer  {
+  animation-name: fadeText;
+  animation-duration: 2s;
+  animation-fill-mode: none;
+}
+
+@keyframes fadeText {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+    /* transform: scale(0.8); */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    /* transform: scale(1); */
+  }
+}
+
+
+/*EFECTO AGRANDA ACHICA*/
+.divLogo{
+  /* border: 1px solid rgba(148, 148, 148, 0.616); */
+  color: rgb(45, 197, 152);
+
+
+  margin: 30px 0 0 0;
+  padding:  0;
+  border-radius: 2px;
+  z-index: 999;
+}
+.divLogo .logo {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+
+}
+.divLogo .logoTitle{
+  /* border: 1px solid green; */
+margin: 0;
+font-size: 16px;
+}
+.divLogo .logoParrafo{
+  /* border: 1px solid green; */
+  margin: 0;
+  font-size: 11px;
+}
+
+
+
+.titleLanding {
+  font-size: 30px;
+  color: rgb(223, 191, 123);
+  margin-block-start: 20px;
+  margin-block-end: 10px;
+  text-decoration: underline;
+}
+.parrafo {
+  width: 100%;
+  font-size: 12.65px;
+  text-align: justify;
+  color: rgb(223, 191, 123);
+}
+
+.link {
+  z-index: 999;
+  background-color: rgb(7, 43, 34);
+  width: 60px;
+  color: rgb(223, 191, 123);
+  text-decoration: none;
+  /* border: 1px solid white; */
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 5px 7px 8px 7px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+
+}
+.link:hover {
+  color: aquamarine;
+}
+
+.link {
+  animation-name: fadebtn;
+  animation-duration: 2s;
+
+  animation-fill-mode: none;
+}
+
+@keyframes fadebtn {
+  0% {
+    opacity: 0;
+
+    /* color: white; */
+    /* transform: scale(0.8); */
+  }
+
+  100% {
+    opacity: 1;
+    /* width: 70px; */
+    /* color: white; */
+    /* transform: scale(2); */
+  } 
+}
+
+
+
+.customLoader {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #10f4e9;
+  display: grid;
+  animation: h1 4s infinite linear;
+}
+.customLoader::before,
+.customLoader::after {
+  content: "";
+  grid-area: 1/1;
+  margin: auto;
+  width: 70.7%;
+  height: 70.7%;
+  border: 2px solid #10f4e9;
+  animation: inherit;
+}
+.customLoader::after {
+  width: 50%;
+  height: 50%;
+  border: 2px solid #10f4e9;
+  animation-duration: 2s;
+}
+@keyframes h1 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
