@@ -5,10 +5,11 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./redux/store"
-// import axios from "axios";
+import axios from "axios";
+
 
 // axios.defaults.baseURL = "http://localhost:3001";
-// axios.defaults.baseURL = "https://rickandmorty-server-production.up.railway.app/";
+axios.defaults.baseURL = "https://henry-food-api-production.up.railway.app/";
 
 const container = document.getElementById("root");
 const root = createRoot(container); // createRoot(container!) if you use TypeScript

@@ -12,7 +12,7 @@ const Update = ({ handleCloseToHome }) => {
 
   const handleServerFunction = (recipe, id) => {
     axios
-      .put(`http://localhost:3001/recipes/${id}`, recipe)
+      .put(`/recipes/${id}`, recipe)
       .then(function (response) {
         if (response.data.recipeUpdate.title) {
           dispatch(getRecipes());

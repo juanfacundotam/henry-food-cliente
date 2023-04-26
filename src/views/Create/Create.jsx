@@ -18,7 +18,7 @@ const Create = () => {
   
   const handleServerFunction = (recipe, id) => {
     axios
-      .post("http://localhost:3001/recipes", recipe)
+      .post("/recipes", recipe)
       .then((response) => {
         // Si la respuesta es exitosa, redirige a otra página
         if(response.data.title){

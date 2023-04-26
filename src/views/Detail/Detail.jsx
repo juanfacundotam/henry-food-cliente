@@ -44,18 +44,6 @@ const Detail = () => {
     }
   };
 
-  // if (
-  //   !id ||
-  //   !title ||
-  //   !image
-  //   // !healthscore ||
-  //   // !summary ||
-  //   // !instructions ||
-  //   // !diets
-  //   ) {
-  //     return <div className={style.customLoader}></div>;
-  //   }
-
   return (
     <div className={style.container}>
       {image ? (

@@ -14,7 +14,7 @@ export const DELETE_RECIPE = "DELETE_RECIPE";
 
 export const getRecipes = () => {
   return async (dispatch) => {
-    const response = await axios.get("http://localhost:3001/recipes");
+    const response = await axios.get("/recipes");
     const recipes = response.data;
     dispatch({ type: GET_RECIPES, payload: recipes });
   };
@@ -22,8 +22,7 @@ export const getRecipes = () => {
 
 export const getRecipesDetail = (id) => {
   return async (dispatch) => {
-    // const response = await axios.get(`http://localhost:3001/recipes/782585`)
-    const response = await axios.get(`http://localhost:3001/recipes/${id}`);
+    const response = await axios.get(`/recipes/${id}`);
     const recipe = response.data;
     dispatch({ type: GET_RECIPES_DETAIL, payload: recipe });
   };
@@ -35,7 +34,7 @@ export const cleanDetail = () => {
 
 export const getAllDiets = () => {
   return async (dispatch) => {
-    const response = await axios.get(`http://localhost:3001/diets`);
+    const response = await axios.get(`/diets`);
     const allDiets = response.data;
     dispatch({ type: GET_ALL_DIETS, payload: allDiets });
   };
@@ -77,7 +76,7 @@ export const orderHealthScore = (scoreOrder) => {
 export const searchByQuery = (query) => {
   return async (dispatch) => {
     const response = await axios.get(
-      `http://localhost:3001/recipes?title=${query}`
+      `/recipes?title=${query}`
     );
     const recipes = response.data;
     dispatch({ type: SEARCH_BY_QUERY, payload: recipes });
@@ -87,7 +86,7 @@ export const searchByQuery = (query) => {
 export const deleteRecipe = (id) => {
   return async (dispatch) => {
     const response = await axios.delete(
-        `http://localhost:3001/recipes/${id}`
+        `/recipes/${id}`
     );
     dispatch({
       type: DELETE_RECIPE,
