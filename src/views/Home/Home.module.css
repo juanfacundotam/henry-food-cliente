@@ -223,6 +223,60 @@
   }
 }
 
+@media screen and (max-width: 440px) {
+  .divSelects {
+    margin-top: 35px;
+  }
+
+  .divSelects .divSearch {
+    margin-bottom: 7px;
+  }
+  .divSelects .searchBar {
+    width: 60%;
+    height: 20px;
+  }
+
+  .divSelects .divSelect12 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .divSelect12 .select1 {
+    margin-bottom: 5px;
+    width: 85%;
+    height: 28px;
+  }
+
+  .divSelect12 .select2 {
+    margin-bottom: 5px;
+    width: 85%;
+    height: 28px;
+  }
+  .divSelects .divSelect34 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .divSelects .select3 {
+    margin-bottom: 5px;
+    width: 85%;
+    height: 28px;
+  }
+  .divSelects .select4 {
+    margin-bottom: 5px;
+    width: 85%;
+    height: 28px;
+  }
+
+  .btnClean {
+
+  }
+  .divSelects .btnSearch {
+    height: 26px;
+  }
+}
 @media screen and (max-width: 340px) {
   .divSelects {
     margin-top: 35px;
