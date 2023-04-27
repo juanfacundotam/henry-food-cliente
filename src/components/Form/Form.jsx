@@ -31,7 +31,7 @@ const Form = ({ buttonName, handleServerFunction, withRecipe }) => {
       diets: recipeSelected.diets,
     };
   }
-
+  
   const [recipe, setRecipe] = useState(obj);
   const [errors, setErrors] = useState({
     title: "",
@@ -41,8 +41,9 @@ const Form = ({ buttonName, handleServerFunction, withRecipe }) => {
     image: "",
     diets: [],
   });
-
+  
   useEffect(() => {
+      setCount(Object.keys(recipe.instructions).length)
     setErrors(validation({ ...recipe }));
   }, [dispatch]);
 
@@ -78,6 +79,7 @@ const Form = ({ buttonName, handleServerFunction, withRecipe }) => {
     setErrors(validation({ ...recipe }));
   };
   const handleDelInstruction = (event) => {
+
     event.preventDefault();
     if (count !== 1) {
       setRecipe({ ...recipe, ...delete recipe.instructions[count] });

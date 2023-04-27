@@ -1,6 +1,6 @@
 import style from "./Landing.module.css";
 import logo from "../../assets/logo.png";
-
+import Loading from "../../components/Loading/Loading";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -27,7 +27,7 @@ const Landing = () => {
               <h1 className={style.logoTitle}>Soy Henry</h1>
               <p className={style.logoParrafo}>Juan Facundo Tam</p>
             </div>
-              <h1 className={style.titleLanding}>Food Recipes</h1>
+            <h1 className={style.titleLanding}>Food Recipes</h1>
             {/* <div className={style.divImage}> */}
             {/* <img src={foto} alt="Logo de la app" className={style.logo} /> */}
             {/* </div> */}
@@ -45,7 +45,7 @@ const Landing = () => {
           </div>
         </>
       ) : (
-        <div className={style.customLoader}></div>
+        <Loading />
       )}
     </div>
   );
