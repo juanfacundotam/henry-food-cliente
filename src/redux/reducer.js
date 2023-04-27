@@ -26,7 +26,7 @@ const rootReducer = (state = initialState, action) => {
   let recipesFiltered;
   switch (action.type) {
     case GET_RECIPES:
-      return { ...state, recipes: action.payload, allRecipes: action.payload };
+      return { ...state, recipes: action.payload, allRecipes: action.payload, recipesBackup: action.payload};
     case GET_RECIPES_DETAIL:
       return { ...state, recipe: action.payload };
     case CLEAN_DETAIL:
@@ -73,17 +73,17 @@ const rootReducer = (state = initialState, action) => {
         recipes: sortRecipes,
       };
     case ORDER_HEALTHSCORE:
-      const orderHealth =
+      let orderHealth = [...state.recipes];
+      console.log(orderHealth)
+     orderHealth =
         action.payload === "Ascendente"
           ? state.recipes.sort((a, b) => a.healthscore - b.healthscore)
           : state.recipes.sort((a, b) => b.healthscore - a.healthscore);
-      console.log(orderHealth);
       return {
         ...state,
         recipes: orderHealth,
       };
     case SEARCH_BY_QUERY:
-      console.log(action.payload)
       return { ...state, recipes: action.payload };
       case DELETE_RECIPE:
         return {...state }

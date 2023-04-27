@@ -48,7 +48,6 @@ const Home = ({ handleLoadNavs }) => {
 
 
   useEffect(() => {
-    
     if (!recipes.length) {
       dispatch(getRecipes());
     } else {
@@ -77,6 +76,8 @@ const Home = ({ handleLoadNavs }) => {
 
   const handleFilterDiets = (event) => {
     dispatch(filterByDiets(event.target.value));
+    setCurrentPage(1);
+    setPageStyle(1);
     // dispatch(filterCreated(event.target.value));
   };
   
@@ -99,9 +100,12 @@ const Home = ({ handleLoadNavs }) => {
   
   const handleSearchChange = (event) => {
     setSearch(event.target.value);
+
   };
   const handleBtnSearch = () => {
     dispatch(searchByQuery(search));
+    setCurrentPage(1);
+    setPageStyle(1);
   };
   
   const handleCloseToHome = () => {
