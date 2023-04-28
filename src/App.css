@@ -9,3 +9,30 @@
   /* width: 98%;
   height: 98%; */
 }
+
+::-webkit-scrollbar {
+  padding: 0px;
+  width: 10px;
+  height: 10px;
+  background-color: #082222;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background-color: #124646;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #c4c0c0;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 15px;
+  background-color: #2d7a56;
+}
+
+::-webkit-scrollbar-button {
+  background-color: #136063;
+  height: 0;
+}

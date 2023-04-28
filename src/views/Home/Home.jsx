@@ -28,12 +28,7 @@ const Home = ({ handleLoadNavs }) => {
   const [recipeUpdate, setRecipeUpdate] = useState({});
   const [loading, setLoading] = useState(false);
 
-  //Clean Filters
-  // const [order, setOrder] = useState("");
-  // const [healthScore, setHealthScore] = useState("");
-  // const [filterDiets, setFilterDiets] = useState("");
-  // const [filterApiBdd, setFilterApiBdd] = useState("");
-  //Paginado
+
   const [pageStyle, setPageStyle] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
   const [recipeXPage, setRecipeXpage] = useState(9);
@@ -152,7 +147,7 @@ const Home = ({ handleLoadNavs }) => {
                     id="select1"
                   >
                     <option disabled="disabled" value="Order">
-                      Order By Id
+                      Order A-Z
                     </option>
                     <option value="Ascendente">Ascendente</option>
                     <option value="Descendente">Descendente</option>

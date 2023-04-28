@@ -114,6 +114,11 @@ font-size: 15px;
   margin: 10px;
   
 }
+.divDetail .divSummary  a{
+  /* border: 3px solid crimson; */
+  color: rgb(65, 184, 158);
+  
+}
 .divDetail .summary {
   /* border: 3px solid crimson; */
   text-align: justify;
@@ -143,6 +148,9 @@ margin-bottom: 20px;
   /* margin: 20px; */
   text-align: start;
   /* margin-top: 30px; */
+}
+.divDetail .divInstructionsHTML  a{
+  color: rgb(65, 184, 158);
 }
 .divDetail .divInstructions .titleInstructions{
   margin: 0;

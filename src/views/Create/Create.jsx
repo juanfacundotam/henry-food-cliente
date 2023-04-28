@@ -35,7 +35,7 @@ const Create = () => {
 
   useEffect(() => {
     dispatch(getAllDiets());
-  }, [])
+  }, [dispatch])
   //*************************************************************** */
   return (
     <div className={style.divForm}>
