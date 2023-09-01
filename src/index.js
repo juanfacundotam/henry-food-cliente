@@ -9,7 +9,7 @@ import axios from "axios";
 
 
 // axios.defaults.baseURL = "http://localhost:3001";
-axios.defaults.baseURL = "https://henry-food-api-production.up.railway.app/";
+axios.defaults.baseURL = "https://food-server-ubqd.onrender.com";
 
 const container = document.getElementById("root");
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
